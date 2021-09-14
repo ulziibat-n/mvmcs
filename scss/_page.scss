@@ -1,0 +1,111 @@
+body {
+    background-color: #FFF;
+    color: #0a0a0a;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0;
+}
+
+::selection {
+    background: #e80707;
+    color: #FFF;
+}
+
+.container {
+    max-width: 500px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 2;
+    padding: 40px 80px;
+    padding-bottom: 80px;
+    text-align: center;
+    background-color: #FFF;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba($color: #000000, $alpha: 0.05);
+
+    @include breakpoint-down( $phone ) {
+        max-width: 90vw;
+        padding: 20px 30px;
+        padding-bottom: 80px;
+    }
+}
+
+h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.animation {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 300px !important;
+    width: 100% !important;
+    height: auto !important;
+}
+
+p {
+    margin-bottom: 1.5rem;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: #FFF;
+    text-decoration: none;
+    background-color: #e80707;
+    border-radius: 5px;
+
+    &:hover {
+        background-color: darken( #e80707, 10% );
+    }
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: #000;
+        opacity: .4;
+        mix-blend-mode: multiply;
+    }
+}
+
+.background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
